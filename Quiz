@@ -1,0 +1,47 @@
+#dict1= {}    # User Answers
+dict2= {}    # Answers
+dict3 ={}  # Questions
+
+
+def AddQuestion(n):
+    for i in range(n):
+        question= input("Enter Question No",i)
+        dict3.update({i:question})
+def AddAnswer(n):
+    for i in range(n):
+        print("Enter Answer No :",i)
+        answer=input()
+        dict2.update({i:answer})
+    return 
+def CheckDefined():
+    for x in dict2:
+        print(x)
+        #print(dict2[i])
+        #print(dict3[i])
+        
+
+print("Hello Users ")
+Indentify = input('''Please press 1 for student  OR  Please press 2 for teacher \n''')
+if (Indentify == 1):
+    play = input("Do you want to play a Quiz Game ")
+    if (play != "yes"):
+        quit()
+    else:
+     print("Okay Lets Play Quiz Game")
+     name = input("What is your name ?")
+     dob = input("What is your Date of Birth")
+     print("Now lets start your quiz !!!!")
+     #WriteQuestion()
+     #CheckAnswers()
+else:
+    print("Hello Faculty ")
+    choice=input('''Please Press 1 For Adding Questions OR Please Press 2 for Adding Answers \n''')
+    if(choice != 1):
+       number=int(input("Enter The Number of Answers you want to add \n"))
+       AddAnswer(number)
+    else:
+       number=int(input("Ennter The Number Of Questions You want To Add \n"))
+       AddQuestion(number) 
+       print(dict2.get(0))
+       CheckDefined()
+ 
