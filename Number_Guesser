@@ -1,0 +1,35 @@
+#from curses.ascii import isdigit
+import random
+top_range=input("Enter the top of range :")
+while True:
+    if  top_range.isdigit():
+        count=0
+        top_range = int(top_range)
+        random_number=random.randint(0,top_range)
+        while True:
+            Guess_it=input("Make Your Guess:")
+            if Guess_it.isdigit():
+                Guess_it=int(Guess_it)
+                if Guess_it==random_number:
+                    print("You Guessed !")
+                    print("The number of the Guess : ",count)
+                    break
+                elif Guess_it<random_number:
+                    print("Guessed number lesser than the random number !")
+                    count+=1
+                    continue
+                elif Guess_it>random_number:
+                    print("Guessed number greater than the random number !")
+                    count+=1
+                    continue
+            else:
+                print("Wrong Input !")
+                continue 
+        break      
+    else:
+        print("Wrong Input !")
+        continue
+
+
+
+#print(random_number)
