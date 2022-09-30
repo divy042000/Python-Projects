@@ -1,0 +1,17 @@
+import random 
+def play():
+    user_in=input("'r' for rock , 'p' for paper , 's' for scissors ")
+    computer=random.choice(['r','s','p'])
+    if(user_in==computer):
+        print("The Game is Tie")
+    if (who_wins(user_in, computer)==True):
+        return "The Player Won The Game" 
+    else:
+        return "The Computer Won The Game" 
+
+def who_wins(player,opponent):
+     if(player=='p' and opponent=='r' or player=='r' and opponent=='s' or player=='s' and opponent=='p'): 
+        return True
+
+
+      
